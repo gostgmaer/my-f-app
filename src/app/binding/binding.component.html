@@ -1,0 +1,78 @@
+
+<div class="container">
+    <div class="form-group">
+
+      <input type="text" [(ngModel)]="username" class="form-control" name="" id="" aria-describedby="helpId" placeholder="Username">
+      <small id="helpId" class="form-text text-muted">Please Enter Your User Name</small>
+    </div>
+    <button (click)="updatesServerStatus()" [disabled]="username === ''" name="" id="" class="btn btn-primary" type="button" value=""> Add Server </button>
+    <Div>
+        <span>{{username}}</span>
+    </Div>
+</div>
+
+
+
+<!-- <div>
+  <p>server is {{serverStatus}}</p>
+</div> -->
+
+
+<app-server *ngFor="let item of servers"></app-server>
+
+<div class="container">
+
+    <div class="form-group">
+
+        <input type="text"
+          class="form-control" name="" id="" (input)="onUpdateServerName($event)" aria-describedby="helpId" placeholder="">
+
+        <input type="text"
+          class="form-control" name="" id="" [(ngModel)]="serverName" (input)="onUpdateServerName($event)" aria-describedby="helpId" placeholder="">
+      </div>
+
+    <button class="btn btn-primary" [disabled]="!allowNewServe" (click)="onServerCreate()" >Submit</button>
+
+    <p>{{serverCreationStatus}}</p>
+    <p>{{serverName}}</p>
+</div>
+
+<div class="container">
+
+  <div class="form-group">
+
+      <input type="text"
+        class="form-control" name="" id="" (input)="onUpdateServerName($event)" aria-describedby="helpId" placeholder="">
+
+
+    </div>
+
+  <button class="btn btn-primary" [disabled]="!allowNewServe" (click)="onServerCreate()" >Submit</button>
+
+  <!-- <p>{{serverCreationStatus}}</p> -->
+  <p *ngIf="serverCreateds; else noserver" >Server was created, server Name {{serverName}}</p>
+
+  <ng-template #noserver >
+    <p>NoServer was created</p>
+  </ng-template>
+
+
+</div>
+
+
+
+
+
+
+<!-- <p>{{allowNewServe}}</p> -->
+
+<div class="container text-center mt-5">
+  <p class="bg-primary mb-5">===========================================================================</p>
+
+  <button (click)="showContent=!showContent" class="btn btn-primary">Display Details</button>
+  <p *ngIf="showContent" class="lead">
+      Secret Password = "ThisisPass"
+  </p>
+
+</div>
+

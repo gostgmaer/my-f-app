@@ -8,6 +8,8 @@ import { ServersComponent } from './servers/servers.component';
 import { FirstAssignmentComponent } from './first-assignment/first-assignment.component';
 import { FirstAssignmentmodaloneComponent } from './first-assignmentmodalone/first-assignmentmodalone.component';
 import { FirstAssignmentmodaltwoComponent } from './first-assignmentmodaltwo/first-assignmentmodaltwo.component';
+import { BindingComponent } from './binding/binding.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,11 +18,13 @@ import { FirstAssignmentmodaltwoComponent } from './first-assignmentmodaltwo/fir
     ServersComponent,
     FirstAssignmentComponent,
     FirstAssignmentmodaloneComponent,
-    FirstAssignmentmodaltwoComponent
+    FirstAssignmentmodaltwoComponent,
+    BindingComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

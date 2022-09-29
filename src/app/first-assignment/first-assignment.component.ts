@@ -8,7 +8,7 @@ import { FirstAssignmentmodaltwoComponent } from '../first-assignmentmodaltwo/fi
   styleUrls: ['./first-assignment.component.css']
 })
 export class FirstAssignmentComponent implements OnInit {
-
+   titleone ="This is Our First Assignment";
   constructor() {
     FirstAssignmentmodaloneComponent
     FirstAssignmentmodaltwoComponent

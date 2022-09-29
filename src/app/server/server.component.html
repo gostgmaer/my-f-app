@@ -1,1 +1,12 @@
-<p>server works!</p>
+
+<ng-container >
+
+<div class="container m-5">
+  <p [ngStyle]="{backgroundColor:getColor()}" >{{'server'}} With ID: {{serverID}} is {{getServerStatus()}}</p>
+  <p [ngClass]="{online:serverStatus==='onLine'}" >{{'server'}} With ID: {{serverID}} is {{serverStatus}}</p>
+</div>
+
+
+
+
+</ng-container>
